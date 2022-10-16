@@ -10,15 +10,12 @@ import io.cucumber.java.en.When;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.junit.Assert;
-import org.openqa.selenium.WebDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 
-
 public class Scenario1StepDefs {
 
-    WebDriver driver;
 
     TranslationPage translationPage = new TranslationPage();
 
@@ -45,7 +42,7 @@ public class Scenario1StepDefs {
 
     }
     @Given("user select the source language")
-    public void user_select_the_source_language() throws IOException {
+    public void user_select_the_source_language(){
 
         String sourceLanguage = ""+sheet.getRow(1).getCell(0);
         translationPage.sourceLanguageArrow.click();
@@ -100,12 +97,7 @@ public class Scenario1StepDefs {
     @Then("user select screen keyboard and type Hi!")
     public void user_select_screen_keyboard_and_type_Hi() {
 
-        translationPage.screenKeyboard.click();
-        translationPage.upperCase.click();
-        translationPage.letterH.click();
-        translationPage.letterI.click();
-        translationPage.upperCase.click();
-        translationPage.exclamationMark.click();
+        translationPage.typeHi();
 
 
     }
