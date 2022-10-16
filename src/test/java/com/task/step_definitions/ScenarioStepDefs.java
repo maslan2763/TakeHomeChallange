@@ -14,7 +14,7 @@ import org.junit.Assert;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class Scenario1StepDefs {
+public class ScenarioStepDefs {
 
 
     TranslationPage translationPage = new TranslationPage();
@@ -31,7 +31,7 @@ public class Scenario1StepDefs {
     // <2> We need to get specific sheet from currently opened workbook
     XSSFSheet sheet = workbook.getSheet("Translation");
 
-    public Scenario1StepDefs() throws IOException {
+    public ScenarioStepDefs() throws IOException {
     }
 
     @Given("user is on the google translation page")
