@@ -26,4 +26,6 @@
 
 - Some important datas have been taken from a separate  data file(excel file) by the help of Apache.poi
 
+- My Framework can do parallel testing as well.
+
 
